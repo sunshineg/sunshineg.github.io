@@ -1,4 +1,4 @@
-![SunnyGao](https://segmentfault.com/img/bVbztvr)
+![SunnyGao](https://image-static.segmentfault.com/237/643/2376439925-5db48d9777d56_fix732)
 
 **高阳Sunny**，Open Source believer。开发者社区 SegmentFault 思否 CEO，开源博客系统 Typecho 项目成员，C14Z 创之俱乐部发起人；开源社顾问委员会成员，腾源会导师，开放原子大学第一届特聘讲师；中国技术先锋、开源先锋 33 人、开源码力榜等项目发起人。作为一个年轻的创业者，高阳曾在 2014 年入选福布斯中国 30U30，2015 年入选彭博商业周刊 25U25，2019 年入选胡润百富 Under30s 创业领袖人物。
 
@@ -21,15 +21,15 @@
 
 **C14Z 创之俱乐部**：是高阳于 2013 年发起的年轻创业者社群。社群成立 6 年来，已经由最初的十几个人，发展到近 150 人。虽然大家分布在美国、英国、法国、加拿大，以及中国香港、北京、上海、广州、深圳、杭州、武汉等不同的地区，却保持着持续地交流学习、高频的社群活动，见证彼此的成长。这些年轻人也从一群尚在读书的学生发展为中国科技创业的中坚力量。社群成员创立的几十家公司市值过百亿，数十位成员入选亚洲及中国区胡润/福布斯 30U30。Crazy GenerationZ 是社群的英文名称，缩写为：C14Z，取名规则参考了世界顶级投资机构 A16Z，数字 14 同时也是向 PayPal Mafia 的 14 人致敬！ 
 
-![cctvpt.png](https://segmentfault.com/img/bVbztvN)
+![cctvpt.png](https://image-static.segmentfault.com/374/621/3746216557-5db48f51ac773_fix732)
 
 2015 年 3 月，硅谷风投教父彼得·蒂尔(Peter Thiel)带着他的新书《从 0 到 1》，来华参加访谈节目——CCTV-2《对话》栏目就此推出专场「创新：从 0 到 1」。从硅谷来到北京，跨越两个互联网世界，彼得·蒂尔与国内互联网创业军团唐彬、周鸿祎等商界大咖畅谈互联网时代的投资创业大事。
 
 SegmentFault CEO 高阳也参与本次节目，向大咖们绍 SegmentFault 平台发展，并与 Peter Thiel 进一步讨论交流，得到彼得·蒂尔笑脸肯定，两人相互交换名片，SegmentFault CEO 高阳是当时唯一获得彼得.蒂尔赞赏和笑脸支持的创业者。此外，也是本期唯一同时获得周鸿祎、唐彬、徐小平、牛文文肯定的 90 后青年创业者。
 
-![2015年李强省长新生代企业家座谈.jpg](https://segmentfault.com/img/bVbztvP)
+![2015年李强省长新生代企业家座谈.jpg](https://image-static.segmentfault.com/234/780/2347802018-5db49049f3e63_fix732)
 
-![3.pic.jpg](https://segmentfault.com/img/bVbztvQ)
+![3.pic.jpg](https://image-static.segmentfault.com/970/539/970539583-5db49057ea41c_fix732)
 
 高阳先后三次获得前浙江省省长（现任中央政治局委员，上海市委书记）李强座谈会约见，共同探讨青年科技创新创业，并对 SegmentFault 赋能技术人才和科技产业的事业给予了高度的肯定和赞扬。
 
