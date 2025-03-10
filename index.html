@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阳(Sunny) - SegmentFault思否CEO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* 全局样式 */
+        :root {
+            --primary-color: #00ff41;
+            --secondary-color: #0a0a0a;
+            --accent-color: #ff00ff;
+            --text-color: #f0f0f0;
+            --dark-bg: #0a0a0a;
+            --terminal-bg: #0c0c0c;
+            --terminal-header: #1a1a1a;
+            --glitch-color-1: #ff00ff;
+            --glitch-color-2: #00ffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 矩阵背景效果 */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.97), rgba(0, 0, 0, 0.97)), 
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="20" font-family="monospace" font-size="10" fill="rgba(0,255,65,0.1)">01001</text><text x="30" y="40" font-family="monospace" font-size="10" fill="rgba(0,255,65,0.1)">10110</text><text x="50" y="60" font-family="monospace" font-size="10" fill="rgba(0,255,65,0.1)">01010</text><text x="70" y="80" font-family="monospace" font-size="10" fill="rgba(0,255,65,0.1)">11001</text></svg>');
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        /* 导航栏 */
+        nav {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(5px);
+            border-bottom: 1px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 255, 65, 0.2);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 1rem 0;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), transparent);
+        }
+
+        .glitch-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .glitch {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--glitch-color-1);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim-1 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 var(--glitch-color-2);
+            clip: rect(24px, 450px, 100px, 0);
+            animation: glitch-anim-2 4s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim-1 {
+            0% {
+                clip: rect(20px, 450px, 39px, 0);
+            }
+            20% {
+                clip: rect(44px, 450px, 56px, 0);
+            }
+            40% {
+                clip: rect(71px, 450px, 86px, 0);
+            }
+            60% {
+                clip: rect(12px, 450px, 34px, 0);
+            }
+            80% {
+                clip: rect(33px, 450px, 54px, 0);
+            }
+            100% {
+                clip: rect(67px, 450px, 98px, 0);
+            }
+        }
+
+        @keyframes glitch-anim-2 {
+            0% {
+                clip: rect(63px, 450px, 78px, 0);
+            }
+            20% {
+                clip: rect(24px, 450px, 45px, 0);
+            }
+            40% {
+                clip: rect(5px, 450px, 29px, 0);
+            }
+            60% {
+                clip: rect(58px, 450px, 73px, 0);
+            }
+            80% {
+                clip: rect(82px, 450px, 96px, 0);
+            }
+            100% {
+                clip: rect(17px, 450px, 37px, 0);
+            }
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+
+        /* 主要内容区域 */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 英雄区域 */
+        #hero {
+            margin-bottom: 4rem;
+        }
+
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .profile-container {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .profile-image {
+            flex: 1;
+            max-width: 400px;
+            position: relative;
+        }
+
+        .image-glitch-effect {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.5);
+        }
+
+        .image-glitch-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 65%, rgba(255, 0, 255, 0.3) 65%, rgba(255, 0, 255, 0.3) 70%, transparent 70%);
+            background-size: 200% 200%;
+            animation: glitch-effect 3s infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes glitch-effect {
+            0% {
+                background-position: 0% 0%;
+            }
+            20% {
+                background-position: 20% 20%;
+            }
+            40% {
+                background-position: 40% 40%;
+            }
+            60% {
+                background-position: 60% 60%;
+            }
+            80% {
+                background-position: 80% 80%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        .profile-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .terminal {
+            flex: 1;
+            background-color: var(--terminal-bg);
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+            border: 1px solid var(--primary-color);
+        }
+
+        .terminal-header {
+            background-color: var(--terminal-header);
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+            background-color: #ff5f56;
+        }
+
+        .terminal-button:nth-child(2) {
+            background-color: #ffbd2e;
+        }
+
+        .terminal-button:nth-child(3) {
+            background-color: #27c93f;
+        }
+
+        .terminal-title {
+            margin-left: 10px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        .terminal-body {
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .typing-text {
+            white-space: pre-wrap;
+        }
+
+        .prompt {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
+        }
+
+        .command {
+            color: #ffffff;
+        }
+
+        .response {
+            color: #cccccc;
+            margin-left: 1rem;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% {
+                opacity: 1;
+            }
+            50%, 100% {
+                opacity: 0;
+            }
+        }
+
+        /* 章节容器 */
+        .section-container {
+            margin-bottom: 4rem;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: rgba(10, 10, 10, 0.7);
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .section-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0, 255, 65, 0.2);
+        }
+
+        .section-header {
+            background-color: rgba(0, 255, 65, 0.1);
+            padding: 1rem;
+            border-bottom: 1px solid var(--primary-color);
+        }
+
+        .cyber-heading {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cyber-heading::before {
+            content: '>';
+            margin-right: 0.5rem;
+            font-weight: bold;
+        }
+
+        .content-box {
+            padding: 2rem;
+        }
+
+        /* 技能统计 */
+        .tech-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .stat-circle {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+        }
+
+        .stat-circle svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: rgba(255, 255, 255, 0.1);
+            stroke-width: 2.8;
+        }
+
+        .circle {
+            fill: none;
+            stroke: var(--primary-color);
+            stroke-width: 2.8;
+            stroke-linecap: round;
+        }
+
+        .stat-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+
+        /* 时间线 */
+        .timeline {
+            position: relative;
+            padding: 1rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            height: 100%;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 16px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 50px;
+            top: 0;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .timeline-content {
+            padding-top: 1.5rem;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        /* 社群信息 */
+        .community-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .community-item {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        @media (min-width: 768px) {
+            .community-item {
+                flex-direction: row;
+            }
+        }
+
+        .community-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--primary-color);
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .community-icon {
+                margin: 0;
+            }
+        }
+
+        .community-content {
+            flex: 1;
+        }
+
+        .community-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .community-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        /* 荣誉网格 */
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .honor-item {
+            padding: 1rem;
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .honor-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 65, 0.2);
+        }
+
+        .honor-year {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+            font-weight: bold;
+            border-radius: 3px;
+            margin-bottom: 0.5rem;
+        }
+
+        .honor-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+        }
+
+        /* 联系信息 */
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-note {
+            margin-bottom: 2rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid var(--primary-color);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-quote {
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .glitch {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .cyber-heading {
+                font-size: 1.5rem;
+            }
+            
+            .stat-circle {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .stat-number {
+                font-size: 1.2rem;
+            }
+            
+            .community-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .glitch {
+                font-size: 1.5rem;
+            }
+            
+            .honors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <header>
+        <div class="glitch-container">
+            <h1 class="glitch" data-text="高阳 SUNNY">高阳 SUNNY</h1>
+        </div>
+        <p class="subtitle">SegmentFault思否 CEO / 开发者社区专家 / 创业者</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about" class="nav-link">关于</a></li>
+            <li><a href="#achievements" class="nav-link">成就</a></li>
+            <li><a href="#community" class="nav-link">社群</a></li>
+            <li><a href="#honors" class="nav-link">荣誉</a></li>
+            <li><a href="#contact" class="nav-link">联系</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="hero">
+            <div class="profile-container">
+                <div class="profile-image">
+                    <div class="image-glitch-effect">
+                        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1678143231670/m_czrFjTY.jpeg" alt="高阳Sunny" class="profile-img">
+                    </div>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <span class="terminal-button"></span>
+                        <span class="terminal-button"></span>
+                        <span class="terminal-button"></span>
+                        <span class="terminal-title">user@segmentfault:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="typing-text">
+                            <span class="prompt">$</span> <span class="command">whoami</span><br>
+                            <span class="response">高阳(Sunny) - SegmentFault思否联合创始人兼CEO</span><br>
+                            <span class="prompt">$</span> <span class="command">cat /etc/profile</span><br>
+                            <span class="response">开发者社区与开发者关系专家，开源社顾问委员会成员</span><br>
+                            <span class="prompt">$</span> <span class="command">ls -la /projects</span><br>
+                            <span class="response">SegmentFault思否 | C14Z创之俱乐部 | Answer.dev</span><br>
+                            <span class="prompt">$</span> <span class="command">echo $MISSION</span><br>
+                            <span class="response">凝聚集体智慧，推动技术进步</span><br>
+                            <span class="prompt">$</span> <span class="command">_</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-container">
+            <div class="section-header">
+                <h2 class="cyber-heading">个人简介 <span class="blink">_</span></h2>
+            </div>
+            <div class="content-box">
+                <p>高阳(Sunny)是SegmentFault思否的联合创始人兼CEO，C14Z创之俱乐部发起人，开发者社区与开发者关系专家，开源社顾问委员会成员。他在开发者社区建设和黑客马拉松组织方面拥有丰富经验，是中国技术创业领域的知名人物。</p>
+                
+                <div class="tech-stats">
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <svg viewBox="0 0 36 36">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                <path class="circle" stroke-dasharray="90, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            </svg>
+                            <div class="stat-number">90%</div>
+                        </div>
+                        <div class="stat-label">社区建设</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <svg viewBox="0 0 36 36">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                <path class="circle" stroke-dasharray="85, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            </svg>
+                            <div class="stat-number">85%</div>
+                        </div>
+                        <div class="stat-label">创业领导力</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-circle">
+                            <svg viewBox="0 0 36 36">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                                <path class="circle" stroke-dasharray="95, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+                            </svg>
+                            <div class="stat-number">95%</div>
+                        </div>
+                        <div class="stat-label">开发者关系</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section-container">
+            <div class="section-header">
+                <h2 class="cyber-heading">职业成就 <span class="blink">_</span></h2>
+            </div>
+            <div class="content-box">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2012</div>
+                        <div class="timeline-content">
+                            <h3>联合创办SegmentFault思否</h3>
+                            <p>创立中国最大的新一代开发者社区，凝聚上千万中文开发者</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2013</div>
+                        <div class="timeline-content">
+                            <h3>组织中国最大的黑客马拉松</h3>
+                            <p>成为Hackathon赛事的主要组织者，推动开发者创新</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2014-2019</div>
+                        <div class="timeline-content">
+                            <h3>获得IDG资本、赛富亚洲基金投资</h3>
+                            <p>获得数千万投资，推动思否社区发展</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h3>思否团队加入ONES</h3>
+                            <p>带领团队开启新的发展阶段</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2022</div>
+                        <div class="timeline-content">
+                            <h3>开源Answer.dev</h3>
+                            <p>将问答社区智慧以产品形式开源，帮助组织构建知识社区</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>探索AI与问答社区协同</h3>
+                            <p>举办SegmentFault AIGC Hackathon，推动AI技术在社区的应用</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="section-container">
+            <div class="section-header">
+                <h2 class="cyber-heading">社群建设 <span class="blink">_</span></h2>
+            </div>
+            <div class="content-box">
+                <div class="community-info">
+                    <div class="community-item">
+                        <div class="community-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="community-content">
+                            <h3>C14Z创之俱乐部</h3>
+                            <p>2013年发起年轻创业者社群C14Z创之俱乐部，Crazy GenerationZ是社群的英文名称，缩写为：C14Z，取名规则参考了世界顶级投资机构A16Z，数字14同时也是向PayPal Mafia的14人致敬！</p>
+                            <div class="community-stats">
+                                <div class="stat">
+                                    <span class="stat-value">160+</span>
+                                    <span class="stat-label">成员</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">100亿+</span>
+                                    <span class="stat-label">市值(美金)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="community-item">
+                        <div class="community-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="community-content">
+                            <h3>思否社区</h3>
+                            <p>思否代表"独立思考、敢于否定"，体现了开发者精神。致力于凝聚集体智慧，推动技术进步，为中文开发者提供纯粹、高质量的技术交流平台。</p>
+                            <div class="community-stats">
+                                <div class="stat">
+                                    <span class="stat-value">1000万+</span>
+                                    <span class="stat-label">开发者</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">中国最大</span>
+                                    <span class="stat-label">新一代开发者社区</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="honors" class="section-container">
+            <div class="section-header">
+                <h2 class="cyber-heading">荣誉与认可 <span class="blink">_</span></h2>
+            </div>
+            <div class="content-box">
+                <div class="honors-grid">
+                    <div class="honor-item">
+                        <div class="honor-year">2014</div>
+                        <div class="honor-content">
+                            <h3>福布斯中国30U30</h3>
+                            <p>入选福布斯中国30位30岁以下精英榜单</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2014</div>
+                        <div class="honor-content">
+                            <h3>彭博商业周刊25U25</h3>
+                            <p>入选彭博商业周刊25位25岁以下精英榜单并登陆封面</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2014</div>
+                        <div class="honor-content">
+                            <h3>杭州青年企业家协会</h3>
+                            <p>成为最年轻的理事会员</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2014</div>
+                        <div class="honor-content">
+                            <h3>微软创投加速器</h3>
+                            <p>入选微软创投加速器第四期</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2016</div>
+                        <div class="honor-content">
+                            <h3>联想之星CEO特训班</h3>
+                            <p>入选联想之星CEO特训班第八期</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2019</div>
+                        <div class="honor-content">
+                            <h3>胡润百富Under30s</h3>
+                            <p>入选胡润百富Under30s创业领袖榜单</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2023</div>
+                        <div class="honor-content">
+                            <h3>北京大学创业训练营</h3>
+                            <p>入选北京大学创业训练营全国10期班</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-container">
+            <div class="section-header">
+                <h2 class="cyber-heading">联系方式 <span class="blink">_</span></h2>
+            </div>
+            <div class="content-box">
+                <div class="contact-info">
+                    <p class="contact-note">高阳偏好异步沟通而非实时沟通，注重建立信任与加强了解。如需联系，请准备好自我介绍，Linkedin、Blog、Twitter或Github都是非常好的社交名片。</p>
+                    <div class="social-links">
+                        <a href="https://twitter.com/sunshineg" class="social-link" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <span>@sunshineg</span>
+                        </a>
+                        <a href="https://t.me/SunnyGao" class="social-link" target="_blank">
+                            <i class="fab fa-telegram"></i>
+                            <span>@SunnyGao</span>
+                        </a>
+                        <a href="https://gaoyang.org" class="social-link" target="_blank">
+                            <i class="fas fa-globe"></i>
+                            <span>gaoyang.org</span>
+                        </a>
+                        <a href="https://github.com" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>高阳 Sunny | SegmentFault思否 CEO</p>
+            <p class="footer-quote">"凝聚集体智慧，推动技术进步"</p>
+        </div>
+    </footer>
+
+    <script>
+        // 添加滚动动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-container');
+            
+            function checkScroll() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (sectionTop < windowHeight * 0.75) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            }
+            
+            // 初始化样式
+            sections.forEach(section => {
+                section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            // 检查初始位置
+            checkScroll();
+            
+            // 监听滚动事件
+            window.addEventListener('scroll', checkScroll);
+            
+            // 添加终端打字效果
+            const terminalText = document.querySelector('.typing-text');
+            const originalText = terminalText.innerHTML;
+            terminalText.innerHTML = '';
+            
+            let i = 0;
+            const typeSpeed = 30; // 打字速度
+            
+            function typeWriter() {
+                if (i < originalText.length) {
+                    terminalText.innerHTML += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, typeSpeed);
+                }
+            }
+            
+            // 开始打字效果
+            setTimeout(typeWriter, 500);
+        });
+    </script>
+</body>
+</html>
