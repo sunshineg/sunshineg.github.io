@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高阳(Sunny) - 思否联合创始人 / 创业者 / Builder</title>
+    <title>高阳(Sunny) - 创业者 / Builder / Curator</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* 全局样式 */
@@ -340,6 +342,7 @@
 
         .typing-text {
             white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         .prompt {
@@ -353,7 +356,6 @@
 
         .response {
             color: #cccccc;
-            margin-left: 1rem;
         }
 
         .blink {
@@ -738,6 +740,13 @@
                 flex-direction: column;
             }
         }
+
+        /* 移动端响应式调整：隐藏快捷菜单栏 */
+        @media (max-width: 768px) {
+            nav {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -748,7 +757,7 @@
         <div class="glitch-container">
             <h1 class="glitch" data-text="高阳 SUNNY">高阳 SUNNY</h1>
         </div>
-        <p class="subtitle">思否联合创始人 / 创业者 / Builder</p>
+        <p class="subtitle">思否联合创始人 / 创业者 / Builder / Curator</p>
     </header>
 
     <nav>
@@ -775,19 +784,22 @@
                         <span class="terminal-button"></span>
                         <span class="terminal-button"></span>
                         <span class="terminal-button"></span>
-                        <span class="terminal-title">user@segmentfault:~$</span>
+                        <span class="terminal-title">user@sunny:~$</span>
                     </div>
                     <div class="terminal-body">
                         <p class="typing-text">
                             <span class="prompt">$</span> <span class="command">whoami</span><br>
-                            <span class="response">高阳(Sunny) - 思否联合创始人</span><br>
-                            <span class="prompt">$</span> <span class="command">cat /etc/profile</span><br>
-                            <span class="response">开发者社区与开发者生态专家，开源社顾问委员会成员</span><br>
-                            <span class="prompt">$</span> <span class="command">ls -la /projects</span><br>
-                            <span class="response">SegmentFault思否 | C14Z创之俱乐部 | Answer.dev</span><br>
+                            <span class="response">高阳(Sunny) - 思否联合创始人（exCEO），ApacheAnswer 发起人</span><br><br>
+                            <span class="prompt">$</span> <span class="command">cat ~/.profile | grep "roles"</span><br>
+                            <span class="response">=> 开发者社区与开发者生态专家，开源社顾问委员会成员</span><br><br>
+                            <span class="prompt">$</span> <span class="command">tree -L 1 ~/projects</span><br>
+                            <span class="response">├── SegmentFault 思否</span><br>
+                            <span class="response">├── C14Z 创之俱乐部</span><br>
+                            <span class="response">├── Answer.dev</span><br>
+                            <span class="response">└── ai_startup_project (🚀 状态: 正在进行新的 AI 创业中...)</span><br><br>
                             <span class="prompt">$</span> <span class="command">echo $MISSION</span><br>
-                            <span class="response">凝聚集体智慧，推动科技进步</span><br>
-                            <span class="prompt">$</span> <span class="command">_</span>
+                            <span class="response">"凝聚集体智慧，推动科技进步"</span><br><br>
+                            <span class="prompt">$</span> <span class="command"><span class="blink">_</span></span>
                         </p>
                     </div>
                 </div>
@@ -799,7 +811,8 @@
                 <h2 class="cyber-heading">个人简介 <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
-                <p>高阳(Sunny)是思否的联合创始人，C14Z 创之学社发起人，开发者社区与开发者生态专家，开源社顾问委员会成员。他在开发者社区建设和开发者生态方面拥有丰富经验，是中国技术创业领域的知名人物。</p>
+                <p>高阳 (Sunny) 是思否的联合创始人，C14Z 创之学社发起人，开发者社区与开发者生态专家，开源社顾问委员会成员。他在开发者社区建设和开发者生态方面拥有丰富经验，是中国技术创业领域的知名人物。
+                </p>
 
                 <div class="tech-stats">
                     <div class="stat-item">
@@ -858,7 +871,7 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2012</div>
                         <div class="timeline-content">
-                            <h3>联合创办SegmentFault思否</h3>
+                            <h3>联合创办 SegmentFault 思否</h3>
                             <p>创立中国最大的新一代开发者社区，凝聚上千万中文开发者</p>
                         </div>
                     </div>
@@ -867,14 +880,14 @@
                         <div class="timeline-date">2013</div>
                         <div class="timeline-content">
                             <h3>组织中国最大的黑客马拉松</h3>
-                            <p>成为Hackathon赛事的主要组织者，推动开发者创新</p>
+                            <p>成为 Hackathon 赛事的主要组织者，推动开发者创新</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2014-2019</div>
                         <div class="timeline-content">
-                            <h3>获得IDG资本、赛富亚洲基金投资</h3>
+                            <h3>获得 IDG 资本、赛富亚洲基金投资</h3>
                             <p>获得数千万投资，推动思否社区发展</p>
                         </div>
                     </div>
@@ -882,7 +895,7 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
                         <div class="timeline-content">
-                            <h3>思否团队加入ONES</h3>
+                            <h3>思否团队加入 ONES</h3>
                             <p>带领团队开启新的发展阶段</p>
                         </div>
                     </div>
@@ -890,7 +903,7 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
                         <div class="timeline-content">
-                            <h3>开源Answer.dev</h3>
+                            <h3>开源 Answer.dev</h3>
                             <p>将问答社区智慧以产品形式开源，帮助组织构建知识社区</p>
                         </div>
                     </div>
@@ -898,8 +911,40 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2023</div>
                         <div class="timeline-content">
-                            <h3>探索AI与问答社区协同</h3>
-                            <p>举办SegmentFault AIGC Hackathon，推动AI技术在社区的应用</p>
+                            <h3>探索 AI 与问答社区协同</h3>
+                            <p>举办 SegmentFault AIGC Hackathon，推动 AI 技术在社区的应用</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>Answer 捐入 Apache 软件基金会</h3>
+                            <p>支持团队将 Answer 捐入 Apache 软件基金会，并进入孵化</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>Answer 为 Apache 软件基金会顶级项目</h3>
+                            <p>Apache 软件基金会正式宣布 Apache Answer 已从 Apache 孵化器毕业，成为顶级项目（TLP）</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2025</div>
+                        <div class="timeline-content">
+                            <h3>发布《OpenSource.Win 宣言》</h3>
+                            <p>向全球呼吁在 AI 时代拥抱开源与集体智慧</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-date">2026</div>
+                        <div class="timeline-content">
+                            <h3>开启 AI 时代新创业旅程</h3>
+                            <p>卸任 SegmentFault CEO 身份，与合伙人一起开启新的创业旅程...</p>
                         </div>
                     </div>
                 </div>
@@ -917,9 +962,10 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="community-content">
-                            <h3>C14Z创之俱乐部</h3>
-                            <p>2013年发起年轻创业者社群C14Z创之俱乐部，Crazy
-                                GenerationZ是社群的英文名称，缩写为：C14Z，取名规则参考了世界顶级投资机构A16Z，数字14同时也是向PayPal Mafia的14人致敬！</p>
+                            <h3>C14Z 创之俱乐部</h3>
+                            <p>2013 年发起年轻创业者社群 C14Z 创之俱乐部，Crazy
+                                GenerationZ 是社群的英文名称，缩写为：C14Z，取名规则参考了世界顶级投资机构 A16Z，数字 14 同时也是向 PayPal Mafia 的 14 人致敬！
+                            </p>
                             <div class="community-stats">
                                 <div class="stat">
                                     <span class="stat-value">160+</span>
@@ -941,7 +987,7 @@
                             <p>思否代表"独立思考、敢于否定"，体现了开发者精神。致力于凝聚集体智慧，推动技术进步，为中文开发者提供纯粹、高质量的技术交流平台。</p>
                             <div class="community-stats">
                                 <div class="stat">
-                                    <span class="stat-value">1000万+</span>
+                                    <span class="stat-value">1000 万+</span>
                                     <span class="stat-label">开发者</span>
                                 </div>
                                 <div class="stat">
@@ -964,15 +1010,8 @@
                     <div class="honor-item">
                         <div class="honor-year">2014</div>
                         <div class="honor-content">
-                            <h3>福布斯中国30U30</h3>
-                            <p>入选福布斯中国30位30岁以下精英榜单</p>
-                        </div>
-                    </div>
-                    <div class="honor-item">
-                        <div class="honor-year">2014</div>
-                        <div class="honor-content">
-                            <h3>彭博商业周刊25U25</h3>
-                            <p>入选彭博商业周刊25位25岁以下精英榜单并登陆封面</p>
+                            <h3>福布斯中国 30U30</h3>
+                            <p>入选福布斯中国 30 位 30 岁以下精英榜单</p>
                         </div>
                     </div>
                     <div class="honor-item">
@@ -990,24 +1029,38 @@
                         </div>
                     </div>
                     <div class="honor-item">
+                        <div class="honor-year">2015</div>
+                        <div class="honor-content">
+                            <h3>彭博商业周刊 25U25</h3>
+                            <p>入选彭博商业周刊 25 位 25 岁以下精英榜单并登陆封面</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
                         <div class="honor-year">2016</div>
                         <div class="honor-content">
-                            <h3>联想之星CEO特训班</h3>
-                            <p>入选联想之星CEO特训班第八期</p>
+                            <h3>联想之星 CEO 特训班</h3>
+                            <p>入选联想之星 CEO 特训班第八期</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2019</div>
                         <div class="honor-content">
-                            <h3>胡润百富Under30s</h3>
-                            <p>入选胡润百富Under30s创业领袖榜单</p>
+                            <h3>胡润百富 Under30s</h3>
+                            <p>入选胡润百富 Under30s 创业领袖榜单</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2023</div>
                         <div class="honor-content">
                             <h3>北京大学创业训练营</h3>
-                            <p>入选北京大学创业训练营全国10期班</p>
+                            <p>入选北京大学创业训练营全国 10 期班</p>
+                        </div>
+                    </div>
+                    <div class="honor-item">
+                        <div class="honor-year">2025</div>
+                        <div class="honor-content">
+                            <h3>浙江大学数字共创班</h3>
+                            <p>入选浙江大学数字共创班 B 班</p>
                         </div>
                     </div>
                 </div>
@@ -1021,8 +1074,12 @@
             <div class="content-box">
                 <div class="contact-info">
                     <p class="contact-note">
-                        高阳偏好异步沟通而非实时沟通，注重建立信任与加强了解。如需联系，请准备好自我介绍，Linkedin、Blog、Twitter或Github都是非常好的社交名片。</p>
+                        高阳偏好异步沟通而非实时沟通，注重建立信任与加强了解。如需联系，请准备好自我介绍，Linkedin、Blog、Twitter 或 Github 都是非常好的社交名片。</p>
                     <div class="social-links">
+                        <a href="https://github.com/sunshineg" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
                         <a href="https://twitter.com/sunshineg" class="social-link" target="_blank">
                             <i class="fab fa-twitter"></i>
                             <span>@sunshineg</span>
@@ -1034,10 +1091,6 @@
                         <a href="https://gaoyang.org" class="social-link" target="_blank">
                             <i class="fas fa-globe"></i>
                             <span>gaoyang.org</span>
-                        </a>
-                        <a href="https://github.com/sunshineg" class="social-link" target="_blank">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
                         </a>
                     </div>
                 </div>
@@ -1082,17 +1135,50 @@
 
             // 添加终端打字效果
             const terminalText = document.querySelector('.typing-text');
-            const originalText = terminalText.innerHTML;
-            terminalText.innerHTML = '';
 
-            let i = 0;
-            const typeSpeed = 30; // 打字速度
+            // 使用 DOM 节点方式进行文本逐字输出，保护所有 HTML 标签完整，避免布局破坏
+            const textNodes = [];
+            function extractTextNodes(node) {
+                if (node.nodeType === 3) { // Node.TEXT_NODE
+                    // 彻底清除 HTML 源码中的换行符及其尾随缩进，使得排版不受代码格式化干扰
+                    // 依赖 <br> 标签来实现视觉上的换行即可！
+                    let cleanText = node.nodeValue.replace(/[\r\n]+\s*/g, '');
+                    if (cleanText.length > 0) {
+                        textNodes.push({
+                            node: node,
+                            originalText: cleanText,
+                            currentLength: 0
+                        });
+                    }
+                    node.nodeValue = ''; // 初始状态清空文本
+                } else {
+                    for (let child of node.childNodes) {
+                        extractTextNodes(child);
+                    }
+                }
+            }
+            extractTextNodes(terminalText);
+
+            let currentNodeIndex = 0;
+            const typeSpeed = 30; // 默认打字速度
 
             function typeWriter() {
-                if (i < originalText.length) {
-                    terminalText.innerHTML += originalText.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, typeSpeed);
+                if (currentNodeIndex < textNodes.length) {
+                    let currentObj = textNodes[currentNodeIndex];
+                    let original = currentObj.originalText;
+
+                    if (currentObj.currentLength < original.length) {
+                        currentObj.currentLength++;
+                        currentObj.node.nodeValue = original.substring(0, currentObj.currentLength);
+
+                        let char = original.charAt(currentObj.currentLength - 1);
+                        // 加快空格等字符的打字速度，让动画更顺滑
+                        let nextSpeed = (char === ' ') ? 10 : typeSpeed;
+                        setTimeout(typeWriter, nextSpeed);
+                    } else {
+                        currentNodeIndex++;
+                        setTimeout(typeWriter, 10);
+                    }
                 }
             }
 
