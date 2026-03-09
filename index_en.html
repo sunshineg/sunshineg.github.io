@@ -747,25 +747,36 @@
                 display: none !important;
             }
         }
+
+        /* 语言切换器底部样式 */
+        .lang-switcher-bottom {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 1000;
+            font-family: 'Courier New', monospace;
+            background: rgba(10, 10, 10, 0.8);
+            padding: 5px 10px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);
+        }
+
+        .lang-switcher-bottom a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+
+        .lang-switcher-bottom a:hover {
+            color: var(--primary-color);
+        }
     </style>
 
 </head>
 
 <body>
-
-    <!-- 语言切换器 -->
-    <div class="lang-switcher"
-        style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; font-family: 'Courier New', monospace; background: rgba(10, 10, 10, 0.8); padding: 5px 10px; border: 1px solid var(--primary-color); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);">
-        <a href="index.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">简</a> |
-        <a href="index_tw.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">繁</a> |
-        <a href="index_en.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">EN</a>
-    </div>
     <div class="matrix-bg"></div>
 
     <header>
@@ -1135,6 +1146,22 @@
             <p class="footer-quote">"Gathering collective wisdom, driving technological progress"</p>
         </div>
     </footer>
+
+    <!-- 语言切换器 -->
+    <div class="lang-switcher"
+        style="margin: 2rem auto; text-align: center; font-family: 'Courier New', monospace; background: rgba(10, 10, 10, 0.8); padding: 10px 20px; border: 1px solid var(--primary-color); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2); width: fit-content;">
+        <a href="index.html" style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">简体中文</a> |
+        <a href="index_tw.html"
+            style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">繁體中文</a> |
+        <a href="index_en.html"
+            style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">English</a>
+    </div>
 
     <script>
         // Add scroll animation effect
