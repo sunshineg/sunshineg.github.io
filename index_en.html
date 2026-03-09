@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高阳(Sunny) - AI 创业者 / Builder / Curator</title>
+    <title>Sunny Gao - AI Entrepreneur / Builder / Curator</title>
     <link rel="icon"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☀️</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -749,44 +749,39 @@
         }
     </style>
 
-    <script>
-        // 多语言自动重定向逻辑
-        if (!localStorage.getItem('lang_redirected')) {
-            localStorage.setItem('lang_redirected', 'true');
-            var lang = (navigator.language || navigator.userLanguage).toLowerCase();
-            if (lang === 'zh-tw' || lang === 'zh-hk' || lang === 'zh-hant' || lang === 'zh-mo') {
-                window.location.replace('index_tw.html');
-            } else if (!lang.startsWith('zh')) {
-                window.location.replace('index_en.html');
-            }
-        }
-    </script>
 </head>
 
 <body>
 
     <!-- 语言切换器 -->
-    <div class="lang-switcher" style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; font-family: 'Courier New', monospace; background: rgba(10, 10, 10, 0.8); padding: 5px 10px; border: 1px solid var(--primary-color); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);">
-        <a href="index.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-color)'">简</a> |
-        <a href="index_tw.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-color)'">繁</a> |
-        <a href="index_en.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-color)'">EN</a>
+    <div class="lang-switcher"
+        style="position: absolute; top: 1rem; right: 1rem; z-index: 1000; font-family: 'Courier New', monospace; background: rgba(10, 10, 10, 0.8); padding: 5px 10px; border: 1px solid var(--primary-color); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2);">
+        <a href="index.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">简</a> |
+        <a href="index_tw.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">繁</a> |
+        <a href="index_en.html" style="color: var(--text-color); text-decoration: none; margin: 0 5px;"
+            onmouseover="this.style.color='var(--primary-color)'"
+            onmouseout="this.style.color='var(--text-color)'">EN</a>
     </div>
     <div class="matrix-bg"></div>
 
     <header>
         <div class="glitch-container">
-            <h1 class="glitch" data-text="高阳 SUNNY">高阳 SUNNY</h1>
+            <h1 class="glitch" data-text="SUNNY GAO">SUNNY GAO</h1>
         </div>
-        <p class="subtitle">AI 创业者 / Builder / Curator</p>
+        <p class="subtitle">AI Entrepreneur / Builder / Curator</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about" class="nav-link">关于</a></li>
-            <li><a href="#achievements" class="nav-link">履历</a></li>
-            <li><a href="#community" class="nav-link">社群</a></li>
-            <li><a href="#honors" class="nav-link">荣誉</a></li>
-            <li><a href="#contact" class="nav-link">联系</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#achievements" class="nav-link">Career</a></li>
+            <li><a href="#community" class="nav-link">Community</a></li>
+            <li><a href="#honors" class="nav-link">Honors</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
@@ -809,17 +804,21 @@
                     <div class="terminal-body">
                         <p class="typing-text">
                             <span class="prompt">$</span> <span class="command">whoami</span><br>
-                            <span class="response">高阳(Sunny) - 思否联合创始人（exCEO），Apache Answer 发起人</span><br><br>
+                            <span class="response">Sunny Gao - Co-founder of SegmentFault (exCEO), Founder of Apache
+                                Answer</span><br><br>
                             <span class="prompt">$</span> <span class="command">cat ~/.profile | grep "roles"</span><br>
-                            <span class="response">=> 开发者社区与开发者生态专家，开源社顾问委员会成员</span><br><br>
+                            <span class="response">=> Expert in Developer Communities & Ecosystems, Advisor at
+                                Kaiyuanshe</span><br><br>
                             <span class="prompt">$</span> <span class="command">tree -L 1 ~/projects</span><br>
-                            <span class="response">├── SegmentFault 思否</span><br>
-                            <span class="response">├── C14Z 创之俱乐部</span><br>
+                            <span class="response">├── SegmentFault</span><br>
+                            <span class="response">├── C14Z Club</span><br>
                             <span class="response">├── Apache Answer</span><br>
                             <span class="response">├── OpenSource.Win</span><br>
-                            <span class="response">└── ai_startup_project (🚀 状态: 正在进行新的 AI 创业中...)</span><br><br>
+                            <span class="response">└── ai_startup_project (🚀 Status: Exploring a new AI
+                                startup...)</span><br><br>
                             <span class="prompt">$</span> <span class="command">echo $MISSION</span><br>
-                            <span class="response">"凝聚集体智慧，推动科技进步"</span><br><br>
+                            <span class="response">"Gathering collective wisdom, driving technological
+                                progress"</span><br><br>
                             <span class="prompt">$</span> <span class="command"><span class="blink">_</span></span>
                         </p>
                     </div>
@@ -829,10 +828,12 @@
 
         <section id="about" class="section-container">
             <div class="section-header">
-                <h2 class="cyber-heading">个人简介 <span class="blink">_</span></h2>
+                <h2 class="cyber-heading">About Me <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
-                <p>高阳 (Sunny) 是思否的联合创始人，C14Z 创之学社发起人，开发者社区与开发者生态专家，开源社顾问委员会成员。他在开发者社区建设和开发者生态方面拥有丰富经验，是中国技术创业领域的知名人物。
+                <p>Sunny Gao is a co-founder of SegmentFault, initiator of C14Z Club, Expert in Developer Communities &
+                    Ecosystems, Advisor at Kaiyuanshe. With extensive experience in developer community building and
+                    developer ecosystems, he is a well-known figure in China's tech startup scene.
                 </p>
 
                 <div class="tech-stats">
@@ -848,7 +849,7 @@
                             </svg>
                             <div class="stat-number">90%</div>
                         </div>
-                        <div class="stat-label">社区建设</div>
+                        <div class="stat-label">Community</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-circle">
@@ -862,7 +863,7 @@
                             </svg>
                             <div class="stat-number">85%</div>
                         </div>
-                        <div class="stat-label">创业领导力</div>
+                        <div class="stat-label">Leadership</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-circle">
@@ -876,7 +877,7 @@
                             </svg>
                             <div class="stat-number">95%</div>
                         </div>
-                        <div class="stat-label">开发者关系</div>
+                        <div class="stat-label">DevRel</div>
                     </div>
                 </div>
             </div>
@@ -884,7 +885,7 @@
 
         <section id="achievements" class="section-container">
             <div class="section-header">
-                <h2 class="cyber-heading">职业履历 <span class="blink">_</span></h2>
+                <h2 class="cyber-heading">Career History <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
                 <div class="timeline">
@@ -892,80 +893,85 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2012</div>
                         <div class="timeline-content">
-                            <h3>联合创办 SegmentFault 思否社区</h3>
-                            <p>创立中国新一代软件开发者问答社区，凝聚上千万中文开发者</p>
+                            <h3>Co-founded SegmentFault Community</h3>
+                            <p>Founded China's next-generation software developer Q&A community, gathering tens of
+                                millions of Chinese developers</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2013</div>
                         <div class="timeline-content">
-                            <h3>最早在中国发起并组织黑客马拉松</h3>
-                            <p>成为 Hackathon 赛事的主要组织者，推动开发者创新</p>
+                            <h3>Pioneered Hackathons in China</h3>
+                            <p>Became a major organizer of Hackathon events, driving developer innovation</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2014-2019</div>
                         <div class="timeline-content">
-                            <h3>获得 IDG 资本、赛富亚洲基金、G5 创新基金等投资</h3>
-                            <p>获得数千万投资，推动 SegmentFault 思否社区发展</p>
+                            <h3>Raised investments from IDG, SAIF, G5, etc.</h3>
+                            <p>Secured millions in funding, accelerating SegmentFault's growth</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
                         <div class="timeline-content">
-                            <h3>带领思否团队加入 ONES</h3>
-                            <p>ONES 并购 SegmentFault，带领思否团队开启新的发展阶段</p>
+                            <h3>Led SegmentFault team to join ONES</h3>
+                            <p>SegmentFault was acquired by ONES; led the team into a new development phase</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
                         <div class="timeline-content">
-                            <h3>支持团队开源问答软件 Answer.dev</h3>
-                            <p>将思否社区智慧以产品形式开源，帮助组织高效构建问答知识社区</p>
+                            <h3>Supported the team to open-source Answer.dev</h3>
+                            <p>Open-sourced community wisdom as a product, helping organizations efficiently build Q&A
+                                communities</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2023</div>
                         <div class="timeline-content">
-                            <h3>探索大模型早期应用价值与创新</h3>
-                            <p>举办多场 SegmentFault AIGC Hackathon，探索大模型早期在社区的应用</p>
+                            <h3>Explored early value of LLMs</h3>
+                            <p>Hosted multiple AIGC Hackathons to explore early LLM applications in communities</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2023</div>
                         <div class="timeline-content">
-                            <h3>Answer 捐入 Apache 软件基金会</h3>
-                            <p>支持团队将 Answer 捐入 Apache 软件基金会，并进入孵化</p>
+                            <h3>Donated Answer to the Apache Software Foundation</h3>
+                            <p>Supported the team in Donating Answer to the Apache Software Foundation, entering
+                                incubation</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2025</div>
                         <div class="timeline-content">
-                            <h3>Answer 为 Apache 软件基金会顶级项目</h3>
-                            <p>Apache 软件基金会正式宣布 Apache Answer 已从 Apache 孵化器毕业，成为顶级项目（TLP）</p>
+                            <h3>Apache Answer became a Top-Level Project</h3>
+                            <p>The Apache Software Foundation officially announced Apache Answer's graduation to a
+                                Top-Level Project (TLP)</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2025</div>
                         <div class="timeline-content">
-                            <h3>发布《OpenSource.Win 宣言》</h3>
-                            <p>向全球呼吁在 AI 时代拥抱开源与集体智慧</p>
+                            <h3>Published "OpenSource.Win Manifesto"</h3>
+                            <p>Called upon the world to embrace open source and collective wisdom in the AI era</p>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2026</div>
                         <div class="timeline-content">
-                            <h3>开启 AI 时代新创业旅程</h3>
-                            <p>卸任 SegmentFault CEO 身份，与合伙人一起开启新的创业旅程...</p>
+                            <h3>Embarked on a new AI startup journey</h3>
+                            <p>Stepped down as SegmentFault CEO, starting a new entrepreneurial journey with partners...
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -974,7 +980,7 @@
 
         <section id="community" class="section-container">
             <div class="section-header">
-                <h2 class="cyber-heading">社群建设 <span class="blink">_</span></h2>
+                <h2 class="cyber-heading">Community Building <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
                 <div class="community-info">
@@ -983,19 +989,20 @@
                             <i class="fas fa-users"></i>
                         </div>
                         <div class="community-content">
-                            <h3>C14Z 创之学社</h3>
-                            <p>2013 年发起年轻创业者社群 C14Z 创之学社，Crazy
-                                GenerationZ Club 是社群的英文名称，缩写为：C14Z Club，取名规则参考了世界顶级投资机构 A16Z，数字 14 同时也是向 PayPal Mafia 的
-                                14 人致敬！
+                            <h3>C14Z Club</h3>
+                            <p>Initiated the young entrepreneurs community C14Z Club in 2013, Crazy
+                                GenerationZ Club is abbreviated as C14Z Club, inspired by a16z, ，and the number 14 also
+                                pays tribute to the 14 members of the PayPal Mafia
+                                !
                             </p>
                             <div class="community-stats">
                                 <div class="stat">
                                     <span class="stat-value">190+</span>
-                                    <span class="stat-label">成员</span>
+                                    <span class="stat-label">Members</span>
                                 </div>
                                 <div class="stat">
-                                    <span class="stat-value">100亿+</span>
-                                    <span class="stat-label">市值(美金)</span>
+                                    <span class="stat-value">10B+</span>
+                                    <span class="stat-label">Market Value(USD)</span>
                                 </div>
                             </div>
                         </div>
@@ -1005,16 +1012,17 @@
                             <i class="fas fa-code"></i>
                         </div>
                         <div class="community-content">
-                            <h3>SegmentFault 思否社区</h3>
-                            <p>思否代表"独立思考、敢于否定"，体现了开发者精神。致力于凝聚集体智慧，推动技术进步，为中文开发者提供纯粹、高质量的技术交流平台。</p>
+                            <h3>SegmentFault Community</h3>
+                            <p>Dedicated to gathering collective wisdom, driving technological progress, and providing a
+                                high-quality technical communication platform for Chinese developers.</p>
                             <div class="community-stats">
                                 <div class="stat">
-                                    <span class="stat-value">1000 万+</span>
-                                    <span class="stat-label">开发者</span>
+                                    <span class="stat-value">10M+</span>
+                                    <span class="stat-label">Developers</span>
                                 </div>
                                 <div class="stat">
-                                    <span class="stat-value">中国最大</span>
-                                    <span class="stat-label">新一代开发者问答社区</span>
+                                    <span class="stat-value">China's Largest</span>
+                                    <span class="stat-label">Next-Gen Developer Q&A Community</span>
                                 </div>
                             </div>
                         </div>
@@ -1025,64 +1033,64 @@
 
         <section id="honors" class="section-container">
             <div class="section-header">
-                <h2 class="cyber-heading">荣誉与认可 <span class="blink">_</span></h2>
+                <h2 class="cyber-heading">Honors & Recognition <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
                 <div class="honors-grid">
                     <div class="honor-item">
                         <div class="honor-year">2014</div>
                         <div class="honor-content">
-                            <h3>福布斯中国 30U30</h3>
-                            <p>入选福布斯中国 30 位 30 岁以下精英榜单</p>
+                            <h3>Forbes China 30 Under 30</h3>
+                            <p>Listed on Forbes China 30 Under 30</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2014</div>
                         <div class="honor-content">
-                            <h3>杭州青年企业家协会</h3>
-                            <p>成为第一位 90 后杭州青年企业家协会理事会员</p>
+                            <h3>Hangzhou Youth Entrepreneurs Assoc.</h3>
+                            <p>First post-90s board member of the Hangzhou Youth Entrepreneurs Assoc.</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2014</div>
                         <div class="honor-content">
-                            <h3>微软创投加速器</h3>
-                            <p>入选微软创投加速器第 4 期</p>
+                            <h3>Microsoft Ventures Accelerator</h3>
+                            <p>Selected for Microsoft Ventures Accelerator Batch 4</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2015</div>
                         <div class="honor-content">
-                            <h3>彭博商业周刊 25U25</h3>
-                            <p>入选彭博商业周刊 25 位 25 岁以下精英榜单并登陆封面</p>
+                            <h3>Bloomberg Businessweek 25 Under 25</h3>
+                            <p>Featured on the cover of Bloomberg Businessweek's 25 Under 25 list</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2016</div>
                         <div class="honor-content">
-                            <h3>联想之星 CEO 特训班</h3>
-                            <p>入选联想之星 CEO 特训班第 8 期</p>
+                            <h3>Legend Star CEO Class</h3>
+                            <p>Selected for Legend Star CEO Special Training Class Batch 8</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2019</div>
                         <div class="honor-content">
-                            <h3>胡润百富 Under30s</h3>
-                            <p>入选胡润百富 Under30s 创业领袖榜单</p>
+                            <h3>Hurun Under 30s To Watch</h3>
+                            <p>Listed on Hurun Under 30s Entrepreneur Leaders</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2023</div>
                         <div class="honor-content">
-                            <h3>北京大学创业训练营</h3>
-                            <p>入选北京大学创业训练营全国 10 期班</p>
+                            <h3>Peking University Ent. Camp</h3>
+                            <p>Selected for Batch 10 of Peking University Entrepreneurship Training Camp</p>
                         </div>
                     </div>
                     <div class="honor-item">
                         <div class="honor-year">2025</div>
                         <div class="honor-content">
-                            <h3>浙江大学数字共创班</h3>
-                            <p>入选浙江大学数字共创班 B 班</p>
+                            <h3>Zhejiang Univ. Digital Co-creation</h3>
+                            <p>Selected for Zhejiang University Digital Co-creation Class B</p>
                         </div>
                     </div>
                 </div>
@@ -1091,12 +1099,13 @@
 
         <section id="contact" class="section-container">
             <div class="section-header">
-                <h2 class="cyber-heading">联系方式 <span class="blink">_</span></h2>
+                <h2 class="cyber-heading">Contact <span class="blink">_</span></h2>
             </div>
             <div class="content-box">
                 <div class="contact-info">
                     <p class="contact-note">
-                        高阳偏好异步沟通而非实时沟通，注重建立信任与加强了解。如需联系，请准备好自我介绍，Linkedin、Blog、Twitter 或 Github 都是非常好的社交名片。</p>
+                        Sunny prefers asynchronous communication to real-time communication, focusing on building trust
+                        and deep understanding. Feel free to connect via LinkedIn, Blog, Twitter, or GitHub.</p>
                     <div class="social-links">
                         <a href="https://github.com/sunshineg" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
@@ -1122,13 +1131,13 @@
 
     <footer>
         <div class="footer-content">
-            <p>高阳 Sunny | Agent builder</p>
-            <p class="footer-quote">"凝聚集体智慧，推动科技进步"</p>
+            <p>Sunny Gao | Agent builder</p>
+            <p class="footer-quote">"Gathering collective wisdom, driving technological progress"</p>
         </div>
     </footer>
 
     <script>
-        // 添加滚动动画效果
+        // Add scroll animation effect
         document.addEventListener('DOMContentLoaded', function () {
             const sections = document.querySelectorAll('.section-container');
 
@@ -1144,26 +1153,26 @@
                 });
             }
 
-            // 初始化样式
+            // Initialize styles
             sections.forEach(section => {
                 section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             });
 
-            // 检查初始位置
+            // Check initial position
             checkScroll();
 
-            // 监听滚动事件
+            // Listen to scroll events
             window.addEventListener('scroll', checkScroll);
 
-            // 添加终端打字效果
+            // Add terminal typing effect
             const terminalText = document.querySelector('.typing-text');
 
-            // 使用 DOM 节点方式进行文本逐字输出，保护所有 HTML 标签完整，避免布局破坏
+            // Use DOM nodes for character-by-character output to protect HTML tags and avoid layout issues
             const textNodes = [];
             function extractTextNodes(node) {
                 if (node.nodeType === 3) { // Node.TEXT_NODE
-                    // 彻底清除 HTML 源码中的换行符及其尾随缩进，使得排版不受代码格式化干扰
-                    // 依赖 <br> 标签来实现视觉上的换行即可！
+                    // Completely clear line breaks and trailing spaces in HTML source to avoid formatting interference
+                    // Rely on <br> tags for visual line breaks!
                     let cleanText = node.nodeValue.replace(/[\r\n]+\s*/g, '');
                     if (cleanText.length > 0) {
                         textNodes.push({
@@ -1172,7 +1181,7 @@
                             currentLength: 0
                         });
                     }
-                    node.nodeValue = ''; // 初始状态清空文本
+                    node.nodeValue = ''; // Clear default text
                 } else {
                     for (let child of node.childNodes) {
                         extractTextNodes(child);
@@ -1182,7 +1191,7 @@
             extractTextNodes(terminalText);
 
             let currentNodeIndex = 0;
-            const typeSpeed = 30; // 默认打字速度
+            const typeSpeed = 30; // Default typing speed
 
             function typeWriter() {
                 if (currentNodeIndex < textNodes.length) {
@@ -1194,7 +1203,7 @@
                         currentObj.node.nodeValue = original.substring(0, currentObj.currentLength);
 
                         let char = original.charAt(currentObj.currentLength - 1);
-                        // 加快空格等字符的打字速度，让动画更顺滑
+                        // Speed up spaces to make the animation smoother
                         let nextSpeed = (char === ' ') ? 10 : typeSpeed;
                         setTimeout(typeWriter, nextSpeed);
                     } else {
@@ -1204,7 +1213,7 @@
                 }
             }
 
-            // 开始打字效果
+            // Start typing effect
             setTimeout(typeWriter, 500);
         });
     </script>
