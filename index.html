@@ -689,6 +689,33 @@
             color: var(--primary-color);
         }
 
+        /* 语言切换器样式 */
+        .lang-switcher {
+            margin-top: 2rem;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+        }
+
+        .lang-switcher a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+            opacity: 0.7;
+        }
+
+        .lang-switcher a:hover {
+            color: var(--primary-color);
+            opacity: 1;
+        }
+
+        .lang-switcher a.active {
+            color: var(--primary-color);
+            font-weight: bold;
+            opacity: 1;
+        }
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .glitch {
@@ -1117,24 +1144,15 @@
         <div class="footer-content">
             <p>高阳 Sunny | Agent builder</p>
             <p class="footer-quote">"凝聚集体智慧，推动科技进步"</p>
+
+            <!-- 语言切换器 -->
+            <div class="lang-switcher">
+                <a href="index.html" class="active">简体中文</a> <span>|</span>
+                <a href="index_tw.html">繁體中文</a> <span>|</span>
+                <a href="index_en.html">English</a>
+            </div>
         </div>
     </footer>
-
-    <!-- 语言切换器 -->
-    <div class="lang-switcher"
-        style="margin: 2rem auto; text-align: center; font-family: 'Courier New', monospace; background: rgba(10, 10, 10, 0.8); padding: 10px 20px; border: 1px solid var(--primary-color); border-radius: 5px; box-shadow: 0 0 10px rgba(0, 255, 65, 0.2); width: fit-content;">
-        <a href="index.html" style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">简体中文</a> |
-        <a href="index_tw.html"
-            style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">繁體中文</a> |
-        <a href="index_en.html"
-            style="color: var(--text-color); text-decoration: none; margin: 0 10px; font-weight: bold;"
-            onmouseover="this.style.color='var(--primary-color)'"
-            onmouseout="this.style.color='var(--text-color)'">English</a>
-    </div>
 
     <script>
         // 添加滚动动画效果
